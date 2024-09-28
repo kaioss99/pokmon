@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação de Pokémon</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url(img/bom1.jpg); /* Substitua pela URL desejada */
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            height: 100vh; /* Altura total da viewport */
+            display: flex; /* Usar flexbox para centralizar */
+            justify-content: center; /* Centralizar horizontalmente */
+            align-items: center; /* Centralizar verticalmente */
+            margin: 0; /* Remover margens */
+        }
+        .game-container {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 600px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .pokemon-image {
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .option-button {
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+        .option-button:hover {
+            transform: scale(1.05);
+        }
+        #result {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container game-container">
+        <h1 class="display-4 mb-4">Adivinhe o Pokémon!</h1>
+        <img id="pokemonImage" alt="Imagem do Pokémon" class="pokemon-image mx-auto d-block" style="display: none;">
+        <div id="options" class="mt-4 d-flex flex-wrap justify-content-center"></div>
+        <div id="result" class="mt-3"></div>
+        <button id="nextButton" class="btn btn-success mt-3" style="display:none;">Próximo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
